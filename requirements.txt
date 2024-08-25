@@ -34,8 +34,8 @@
 # executing==2.0.1
 # fastjsonschema==2.19.1
 # filelock==3.15.4
-# Flask==3.0.3
-# Flask-Cors==4.0.1
+Flask==3.0.3
+Flask-Cors==4.0.1
 # folium==0.16.0
 # fonttools==4.51.0
 # fqdn==1.5.1
@@ -88,10 +88,10 @@ gunicorn==23.0.0
 # nltk==3.8.2
 # notebook==7.1.2
 # notebook_shim==0.2.4
-# numpy==1.26.4
+numpy==1.26.4
 # overrides==7.7.0
 # packaging @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/packaging_1699238434731/work
-# pandas==2.2.2
+pandas==2.2.2
 # pandocfilters==1.5.1
 # parso==0.8.4
 # pexpect==4.9.0
@@ -124,11 +124,11 @@ gunicorn==23.0.0
 # rpds-py==0.18.0
 # ruamel.yaml @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/ruamel.yaml_1699247046910/work
 # safetensors==0.4.4
-# scikit-learn==1.5.1
+scikit-learn==1.5.1
 # scipy==1.14.0
 # seaborn==0.13.2
 # Send2Trash==1.8.2
-# sentence-transformers==3.0.1
+sentence-transformers==3.0.1
 # setuptools==68.2.2
 # six==1.16.0
 # sniffio==1.3.1
