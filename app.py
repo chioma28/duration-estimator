@@ -6,8 +6,8 @@ from sklearn.tree import DecisionTreeRegressor
 import pickle
 from flask_cors import CORS
 import os
-import nltk
-nltk.data.path.append('/nltk_data')
+# import nltk
+# nltk.data.path.append('/nltk_data')
 
 
 app = Flask(__name__)
