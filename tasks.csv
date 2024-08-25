@@ -1,0 +1,53 @@
+title,category,priority,duration,dueDate,reminder,points,pomos,completed,priorityScore
+Submit report,Work,High,2,2024-08-15,2024-08-14,10,2,false,16
+Clean the house,Personal,Medium,3,2024-08-16,2024-08-15,5,1,false,11
+Pickup package,Personal,Low,1,2024-08-17,2024-08-16,2,0,false,3
+Answer emails,Work,Medium,1,2024-08-18,2024-08-17,3,1,false,5
+Prepare presentation,Work,High,4,2024-08-19,2024-08-18,8,3,false,20
+Read a book,Personal,Low,5,2024-08-20,2024-08-19,1,0,false,6
+Exercise,Personal,Medium,1,2024-08-21,2024-08-20,4,2,false,6
+Attend meeting,Work,High,1,2024-08-22,2024-08-21,6,1,false,9
+Plan vacation,Personal,Medium,2,2024-08-23,2024-08-22,7,2,false,11
+Buy groceries,Personal,Low,2,2024-08-24,2024-08-23,3,1,false,5
+Submit tax forms,Work,High,3,2024-08-25,2024-08-24,9,3,false,18
+Fix the car,Personal,Medium,4,2024-08-26,2024-08-25,6,2,false,14
+Clean the garage,Personal,Low,3,2024-08-27,2024-08-26,5,1,false,8
+Write blog post,Work,Medium,2,2024-08-28,2024-08-27,4,1,false,8
+Go to the dentist,Personal,High,1,2024-08-29,2024-08-28,7,1,false,10
+Organize desk,Work,Medium,1,2024-08-30,2024-08-29,2,0,false,4
+Buy a gift,Personal,Low,2,2024-08-31,2024-08-30,3,0,false,5
+Prepare for exam,School,High,4,2024-09-01,2024-08-31,10,3,false,22
+Complete assignment,School,Medium,3,2024-09-02,2024-09-01,7,2,false,13
+Go for a run,Personal,Low,1,2024-09-03,2024-09-02,2,1,false,3
+Update resume,Work,Medium,2,2024-09-04,2024-09-03,5,1,false,9
+Buy tickets,Personal,Low,1,2024-09-05,2024-09-04,1,0,false,2
+Attend conference,Work,High,2,2024-09-06,2024-09-05,8,2,false,14
+Read article,Work,Medium,1,2024-09-07,2024-09-06,2,0,false,4
+Cook dinner,Personal,Low,2,2024-09-08,2024-09-07,4,1,false,6
+Go shopping,Personal,Medium,3,2024-09-09,2024-09-08,6,2,false,12
+Send report,Work,High,1,2024-09-10,2024-09-09,9,1,false,12
+Clean the kitchen,Personal,Medium,2,2024-09-11,2024-09-10,5,1,false,9
+Prepare notes,School,High,2,2024-09-12,2024-09-11,10,2,false,16
+Book appointment,Personal,Low,1,2024-09-13,2024-09-12,3,0,false,4
+Fix laptop,Work,Medium,3,2024-09-14,2024-09-13,4,1,false,10
+Practice guitar,Personal,Low,1,2024-09-15,2024-09-14,2,0,false,3
+Write a report,Work,High,4,2024-09-16,2024-09-15,8,3,false,20
+Study for test,School,Medium,3,2024-09-17,2024-09-16,6,2,false,12
+Clean bathroom,Personal,Low,2,2024-09-18,2024-09-17,4,1,false,6
+Schedule meeting,Work,Medium,2,2024-09-19,2024-09-18,3,1,false,7
+Buy a new phone,Personal,Low,1,2024-09-20,2024-09-19,2,0,false,3
+Attend workshop,Work,High,3,2024-09-21,2024-09-20,7,2,false,16
+Submit application,School,Medium,2,2024-09-22,2024-09-21,5,1,false,9
+Clean windows,Personal,Low,2,2024-09-23,2024-09-22,3,1,false,5
+Update software,Work,Medium,2,2024-09-24,2024-09-23,4,1,false,8
+Read novel,Personal,Low,1,2024-09-25,2024-09-24,2,0,false,3
+Finish project,Work,High,4,2024-09-26,2024-09-25,9,3,false,21
+Go to gym,Personal,Medium,1,2024-09-27,2024-09-26,4,1,false,6
+Organize files,Work,Low,2,2024-09-28,2024-09-27,3,0,false,5
+Complete research,School,High,3,2024-09-29,2024-09-28,8,2,false,17
+Call customer,Work,Medium,1,2024-09-30,2024-09-29,5,1,false,7
+Buy supplies,Personal,Low,2,2024-10-01,2024-09-30,2,0,false,4
+Prepare dinner,Personal,Medium,1,2024-10-02,2024-10-01,3,1,false,5
+Fix door,Personal,Low,3,2024-10-03,2024-10-02,4,1,false,7
+Review document,Work,High,2,2024-10-04,2024-10-03,6,2,false,12
+Attend seminar,Work,Medium,3,2024-10-05,2024-10-04,5,1,false,11
