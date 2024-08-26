@@ -74,15 +74,18 @@ def estimate():
         print(f"Received request data: {request_data}")
 
         title = request_data.get('title')
+        print("t", title)
         
         if not title:
             raise ValueError("Title is missing or empty in the request payload")
 
         estimated_duration = estimate_duration(title)
+        print("ed", estimated_duration)
         
         # Save new data if the title was not in the history
         global data
         historical_data = data[data['title'] == title]
+        print("hd", historical_data)
         if historical_data.empty:
             new_entry = {
                 'title': title,
@@ -91,7 +94,9 @@ def estimate():
                 'daysUntilDue': (pd.Timestamp.now() - pd.Timestamp.now()).days
             }
             new_entry_df = pd.DataFrame([new_entry])
+            print("ned", new_entry_df)
             data = pd.concat([data, new_entry_df], ignore_index=True)
+            print("d", data)
             data.to_csv('tasks_history.csv', index=False)  # Save updated data to CSV
             print(f"Added new task '{title}' with estimated duration {estimated_duration:.2f} minutes to history.")
         
