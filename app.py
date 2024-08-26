@@ -111,6 +111,43 @@ def estimate():
 def test():
     return "Test endpoint is working!"
 
+@app.route('/update-duration', methods=['POST'])
+def update_task():
+    try:
+        # Extract data from the request
+        request_data = request.json
+        title = request_data.get('title')
+        duration = request_data.get('duration')
+        due_date = pd.to_datetime(request_data.get('dueDate'))
+        days_until_due = request_data.get('daysUntilDue')
+
+        # Load and update data
+        global data
+        data = pd.read_csv('tasks_history.csv')
+
+        task_index = data.index[data['title'] == title].tolist()
+        if task_index:
+            data.at[task_index[0], 'duration'] = duration
+            data.at[task_index[0], 'dueDate'] = due_date
+            data.at[task_index[0], 'daysUntilDue'] = days_until_due
+        else:
+            new_entry = {
+                'title': title,
+                'duration': duration,
+                'dueDate': due_date,
+                'daysUntilDue': days_until_due
+            }
+            new_entry_df = pd.DataFrame([new_entry])
+            data = pd.concat([data, new_entry_df], ignore_index=True)
+
+        data.to_csv('tasks_history.csv', index=False)
+
+        return jsonify({'message': 'Task history updated successfully'}), 200
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
 if __name__ == '__main__':
     load_resources()  # Load resources before starting the app
     port = int(os.environ.get('PORT', 5000))
