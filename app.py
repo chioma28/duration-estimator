@@ -11,7 +11,7 @@ import os
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Global variables
 model = None
@@ -57,8 +57,11 @@ def estimate_duration(title):
     estimated_duration = model.predict(new_task_features)
     return estimated_duration[0]
 
-@app.route('/estimate-duration', methods=['POST'])
+@app.route('/estimate-duration', methods=['POST', 'OPTIONS'])
 def estimate():
+    if request.method == 'OPTIONS':
+        # Handle preflight request
+        return jsonify({'message': 'CORS preflight request accepted'}), 200
     try:
         request_data = request.json
         print(f"Received request data: {request_data}")
