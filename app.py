@@ -68,6 +68,9 @@ def estimate():
         return jsonify({'message': 'CORS preflight request accepted'}), 200
     try:
         request_data = request.json
+        if request_data is None:
+            raise ValueError("Request payload is not in JSON format or is empty")
+        
         print(f"Received request data: {request_data}")
 
         title = request_data.get('title')
