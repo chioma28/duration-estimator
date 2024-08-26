@@ -30,33 +30,44 @@ def load_resources():
     data['daysUntilDue'] = (data['dueDate'] - pd.Timestamp.now()).dt.days
     data['daysUntilDue'] = pd.to_numeric(data['daysUntilDue'], errors='coerce')
 
+
 def estimate_duration(title):
+    if not title:
+        raise ValueError("Title is empty or None")
+
+    # Check if title_embedding is created properly
     title_embedding = embedding_model.encode([title], convert_to_tensor=True)
+    print(f"Title embedding: {title_embedding}")
+
     similarities = util.pytorch_cos_sim(title_embedding, embeddings).numpy()
+    print(f"Similarities: {similarities}")
+
     most_similar_index = np.argmax(similarities)
     similar_task_duration = data['duration'].iloc[most_similar_index]
 
-    # Create feature set for prediction
     new_task_features = pd.DataFrame({
         'duration': [similar_task_duration],
         'daysUntilDue': [data['daysUntilDue'].mean()]  # Ensure this is numeric
     })
-    
-    # Ensure the features are numeric
+
     new_task_features = new_task_features.apply(pd.to_numeric, errors='coerce')
-    
-    # Debugging output
     print("New task features for prediction:")
     print(new_task_features)
 
-    # Predict the duration
     estimated_duration = model.predict(new_task_features)
     return estimated_duration[0]
 
 @app.route('/estimate-duration', methods=['POST'])
 def estimate():
     try:
-        title = request.json.get('title')
+        request_data = request.json
+        print(f"Received request data: {request_data}")
+
+        title = request_data.get('title')
+        
+        if not title:
+            raise ValueError("Title is missing or empty in the request payload")
+
         estimated_duration = estimate_duration(title)
         
         # Save new data if the title was not in the history
@@ -86,6 +97,6 @@ def test():
 
 if __name__ == '__main__':
     load_resources()  # Load resources before starting the app
-    port = int(os.environ.get('PORT', 5300))
-    app.run(debug=True, port=port)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(port=port)
 
