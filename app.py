@@ -30,6 +30,7 @@ def load_resources():
     data['daysUntilDue'] = (data['dueDate'] - pd.Timestamp.now()).dt.days
     data['daysUntilDue'] = pd.to_numeric(data['daysUntilDue'], errors='coerce')
 
+load_resources()
 
 def estimate_duration(title):
     if not title:
