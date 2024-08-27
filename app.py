@@ -47,7 +47,7 @@ def estimate_duration(title):
     similar_task_duration = data['duration'].iloc[most_similar_index]
     similar_task_title = data['title'].iloc[most_similar_index]
 
-    print("The most similar task is ", similar_task_title, "with a duration of ",  {similar_task_duration}, "minutes ")
+    # print("The most similar task is ", similar_task_title, "with a duration of ",  {similar_task_duration}, "minutes ")
 
 
     new_task_features = pd.DataFrame({
